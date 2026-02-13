@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Лабораторная работа Bootstrap</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <style>
+        
+        .lead {
+            text-align: justify; /* выравнивание по ширине страницы для абзацев класса .lead. */
+        }
+        
+        @media (max-width: 576px) {
+            .lead {
+                font-size: 1rem; /* размера экрана до sm размер шрифта абзацев класса .lead должен стать 1 rem */
+            }
+        }
+    </style>
+  </head>
+<body class="container">
+
+<header>
+
+    <nav class="navbar navbar-expand-md bg-light navbar-light border mb-3 " > <!-- mb-3 для отступа снизу и border почему бы и нет -->
+        <a class="navbar-brand" href="#">Топ высотных зданий</a>  
+
+        <button 
+            class="navbar-toggler" 
+            type="button" 
+            data-bs-toggle="collapse" 
+            data-bs-target="#menu">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="menu">
+
+            <ul class="navbar-nav me-auto">
+            <li class="nav-item">
+                <a class="nav-link active" href="#">Главная</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Список зданий</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link disabled" href="#">Контакты</a>
+            </li>
+            </ul>
+
+            <form  class="d-flex">
+                <input class="form-control" type="text" placeholder="Найти">
+                <button class="btn btn-outline-success" type="submit">Найти</button>
+            </form>
+        </div>
+
+    </nav>
+
+</header>
+
+    <div class="row gy-3 text-center mb-3 pb-3 border-bottom"> <!-- mb-3 pb-3 border-bottom для отступа снизу и разделительной линии -->
+
+        <div class="col-lg-2 col-md-4 col-6">
+            <img class="img-fluid img-thumbnail" src="images/image1.jpg" alt="">
+        </div>
+
+        <div class="col-lg-2 col-md-4 col-6">
+            <img class="img-fluid img-thumbnail" src="images/image2.jpg" alt="">
+        </div>
+
+        <div class="col-lg-2 col-md-4 col-6">
+            <img class="img-fluid img-thumbnail" src="images/image3.jpg" alt="">
+        </div>
+
+        <div class="col-lg-2 col-md-4 col-6">
+            <img class="img-fluid img-thumbnail" src="images/image4.jpg" alt="">
+        </div>
+
+        <div class="col-lg-2 col-md-4 col-6">
+            <img class="img-fluid img-thumbnail" src="images/image5.jpg" alt="">
+        </div>
+
+        <div class="col-lg-2 col-md-4 col-6">
+            <img class="img-fluid img-thumbnail" src="images/image6.jpg" alt="">
+        </div>
+
+    </div>
+
+    <!-- карусель -->
+    <div id="gallery"   class="carousel slide carousel-dark mb-3 pb-3 border-bottom" data-bs-ride="carousel"> <!-- mb-3 pb-3 border-bottom для отступа снизу и разделительной линии -->
+
+        <div class="carousel-inner">
+
+            <div class="carousel-item active">
+                <img src="images/image1.jpg" class="d-block mx-auto" alt="">
+            </div>
+
+            <div class="carousel-item">
+                <img src="images/image2.jpg" class="d-block mx-auto" alt="">
+            </div>
+
+            <div class="carousel-item">
+                <img src="images/image3.jpg" class="d-block mx-auto" alt="">
+            </div>
+
+            <div class="carousel-item">
+                <img src="images/image4.jpg" class="d-block mx-auto" alt="">
+            </div>
+
+            <div class="carousel-item">
+                <img src="images/image5.jpg" class="d-block mx-auto" alt="">
+            </div>
+
+            <div class="carousel-item">
+                <img src="images/image6.jpg" class="d-block mx-auto" alt="">
+            </div>
+
+        </div>
+
+        <button class="carousel-control-prev" type="button" data-bs-target="#gallery" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Предыдущий</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#gallery" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Следующий</span>
+        </button>
+
+    </div>
+
+    <main class="container">
+        <div class="row mb-3 pb-3 border-bottom"> <!-- mb-3 pb-3 border-bottom для отступа снизу и разделительной линии -->
+            <div class="col-md-9">
+            <h2>
+                CN Tower, <span class="text-muted">Торонто, Канада</span>
+            </h2>
+            <p class="lead">
+                553,3-метровая телевизионная башня. Была самым высоким свободно стоящим сооружением в мире с 1976 по 2007 год, 
+                а также до сих пор остаётся таковым в Западном полушарии. Является символом Торонто.
+            </p>
+            <p class="lead">
+                Земляные работы для сооружения железобетонной конструкции с последующим 
+                натяжением арматуры весом 130 000 т начались 12 февраля 1973 г., а уже 2 апреля 1975 г. возведение башни было завершено.  
+            </p>
+            <p class="lead">
+                Башня используется для телекоммуникационных нужд. Кроме того, башня используется как обзорная площадка. 
+                Также на башне имеется вращающийся ресторан.
+            </p>
+            <p class="lead">
+                На высоте 447 м находится астрономическая обсерватория.
+            </p>
+            </div>
+
+            <div class="col-md-3">
+            <img src="images/image9.jpg" class="d-block mx-auto">
+            </div>
+        </div>
+
+        <div class="row mb-3 pb-3 border-bottom"> <!-- mb-3 pb-3 border-bottom для отступа снизу и разделительной линии -->
+            <div class="col-md-9 order-md-2"> <!-- order-md-2 для изменения порядка -->
+            <h2>
+                Бурдж-Халифа, <span class="text-muted">Дубай, ОАЭ</span>
+            </h2>
+            <p class="lead">
+                Небоскрёб высотой 828 метров, самое высокое сооружение в мире. Форма здания напоминает сталагмит.
+
+            </p>
+            <p class="lead">
+                Строительство небоскрёба началось в 2004 году и шло со скоростью 1—2 этажа в неделю. Ежедневно на строительстве 
+			    работало до 12 000 рабочих. На его создание ушло около 320 тыс. м³ бетона и более 60 тыс. тонн стальной арматуры. 
+			    Бетонные работы были завершены после возведения 160 этажа, далее шла сборка 180-метрового шпиля из металлических 
+			    конструкций.
+            </p>
+            <p class="lead">
+                Специально для «Бурдж-Халифа» была разработана особая марка бетона, который выдерживает температуру до +50 °C.
+			    Бетонную смесь укладывали только ночью, а в раствор добавляли лёд.
+            </p>
+            </div>
+
+            <div class="col-md-3 order-md-1"> <!-- order-md-1 для изменения порядка -->
+            <img src="images/image10.jpg" class="d-block mx-auto">
+            </div>
+        </div>
+
+        <div class="row mb-3 pb-3 border-bottom"> <!-- mb-3 pb-3 border-bottom для отступа снизу и разделительной линии -->
+            <div class="col-md-9">
+            <h2>
+                Небесное дерево, <span class="text-muted">Токио, Япония</span>
+            </h2>
+            <p class="lead">
+                Телевизионная башня в районе Сумида самая высокая среди телебашен мира. Высота телебашни вместе с антенной составляет 634 метра. 
+			    Высота башни была выбрана так, чтобы цифры: 6 (на старом японском «му»), 3 («са»), 4 («си») были созвучны «Мусаси» — 
+			    названию исторической области, где находится современный Токио.
+            </p>
+            <p class="lead">
+                Здание напоминает пятиярусную пагоду, что хорошо сочетается с историческим районом Асакуса на другом берегу реки. 
+			    Основание башни напоминает штатив; с высоты примерно 350 м она имеет цилиндрическую форму, позволяющую наслаждаться 
+			    панорамными видами реки и города. 
+            </p>
+            <p class="lead">
+                Имеются две наблюдательные площадки: одна на высоте 350 м (вместимостью 2000 человек), другая на высоте 450 м 
+		        (вместимостью 900 человек). 
+            </p>
+            </div>
+
+            <div class="col-md-3">
+            <img src="images/image11.jpg" class="d-block mx-auto">
+            </div>
+        </div>
+
+    </main>
+
+    <!-- футер -->
+    <footer class="container text-center">
+        <p class="text-muted">Автор: Алексей Калюжко</p>
+        <p class="text-muted">Группа: Б9123-09.03.04(2)</p>
+        <p class="text-muted">kalyuzhko.am@dvfu.ru</p>
+    </footer>
+
+</body>
+</html>
