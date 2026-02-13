@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang = "ru">
+<head>
+    <meta charset="UTF-8">
+      <title>Страница с таблицей</title>
+</head>
+<body rightmargin="20" leftmargin="20">
+
+    <h1>Музыка</h1>
+
+    <p>
+        <a href="index.html">Главная</a> | 
+        <a href="tracklist.html">Статистика</a>
+    </p>
+
+    <form>
+         <details>
+            <summary><b>Фильтры</b></summary>
+            <p>
+                Исполнитель<input type="text" name="artistFilter" placeholder="фильтр по исполнителю"> 
+                <br><br>
+                Название трека<input type="text" name="trackFilter" placeholder="фильтр по названию трека">
+                                <br><br>
+                Альбом<input type="text" name="albumFilter" placeholder="фильтр по альбому">
+                                <br><br>
+                Год выпуска от <input type="number" name="yearFilter">
+                до <input type="number" name="yearFilter">
+                                <br><br>
+                Прослушивания от <input type="number" name="playsFilter" placeholder="мин. прослушивания">
+                до <input type="number" name="playsFilter" placeholder="макс. прослушивания">
+            </p>
+            <p>
+                <input type="submit" value="Найти">
+                                <br>
+                <input type="reset" value="Сбросить фильтры">
+            </p>
+        </details>
+    </form>
+
+    <form>
+        <details>
+            <summary><b>Сортировки</b></summary>
+            <p>
+                Первый уровень: 
+                <select name="firstColumn">
+                    <option value="null">Нет</option>
+                    <option value="artist">Исполнитель</option>
+                    <option value="track">Название трека</option>
+                    <option value="album">Альбом</option>
+                    <option value="year">Год выпуска</option>
+                    <option value="plays">Прослушивания</option>
+                </select>
+                по убыванию? <input type="checkbox" name="less"> <br>
+                <br><br>
+                Второй уровень: 
+                <select name="secondColumn">
+                    <option value="null">Нет</option>
+                    <option value="artist">Исполнитель</option>
+                    <option value="track">Название трека</option>
+                    <option value="album">Альбом</option>
+                    <option value="year">Год выпуска</option>
+                    <option value="plays">Прослушивания</option>
+                </select>
+                по убыванию? <input type="checkbox" name="less"> <br>
+
+                <br><br>
+                Третий уровень: 
+                <select name="thirdColumn">
+                    <option value="null">Нет</option>
+                    <option value="artist">Исполнитель</option>
+                    <option value="track">Название трека</option>
+                    <option value="album">Альбом</option>
+                    <option value="year">Год выпуска</option>
+                    <option value="plays">Прослушивания</option>
+                </select>
+                по убыванию? <input type="checkbox" name="less"> <br>
+
+                <br><br>   
+                <input type="submit" value="Применить сортировку">
+            </p>
+        </details>
+    </form>
+
+    <form>
+        <details>
+            <summary><b>Настройки графика</b></summary>
+            <p>
+                <b>OX</b><br>
+                <input type="radio" name="chartType" value="bar" checked> Испольнитель <br>
+                <input type="radio" name="chartType" value="line"> Альбом <br>
+                <input type="radio" name="chartType" value="pie"> Год <br>
+            </p>
+            <p>
+                <b>OY</b><br>
+                Данные для отображения: <br>
+                <input type="checkbox" name="showAvgPlays"> Среднее количество прослушиваний <br>
+                <input type="checkbox" name="showMinPlays"> Минимальные прослушивания <br>
+                <input type="checkbox" name="showMaxPlays"> Максимальные прослушивания <br>
+            </p>
+            <p>
+                <input type="submit" value="Обновить график">
+            </p>
+        </details>
+    </form>
+
+    <table width="100%" border="1">
+        <thead>
+            <tr>
+                <th>Исполнитель</th>
+                <th>Приглашенные исполнители</th>
+                <th>Название трека</th>
+                <th>Альбом</th>
+                <th>Год</th>
+                <th>Прослушивания</th>
+            </tr>
+        </thead>
+        <tbody>
+<tr><td>Juicy J</td><td></td><td>Riley</td><td>Blue Dream & Lean</td><td>2011</td><td>6 830 000</td></tr>
+<tr><td>Future</td><td>Lil Wayne</td><td>After That</td><td>Monster</td><td>2014</td><td>9 595 000</td></tr>
+<tr><td>Future</td><td></td><td>Throw Away</td><td>Monster</td><td>2014</td><td>128 925 000</td></tr>
+<tr><td>Future</td><td></td><td>Codeine Crazy</td><td>Monster</td><td>2014</td><td>195 935 000</td></tr>
+<tr><td>Future, Metro Boomin</td><td>Travis Scott, Playboi Carti</td><td>Type Shit</td><td>WE DON'T TRUST YOU</td><td>2024</td><td>631 077 000</td></tr>
+<tr><td>Future, Metro Boomin</td><td></td><td>Magic Don Juan (Princess Diana)</td><td>WE DON'T TRUST YOU</td><td>2024</td><td>41 201 000</td></tr>
+<tr><td>Future, Metro Boomin</td><td>The Weeknd</td><td>Young Metro</td><td>WE DON'T TRUST YOU</td><td>2024</td><td>131 412 000</td></tr>
+<tr><td>Playboi Carti</td><td></td><td>EVIL JORDAN</td><td>MUSIC</td><td>2025</td><td>192 809 000</td></tr>
+<tr><td>Playboi Carti</td><td>Future</td><td>TRIM</td><td>MUSIC</td><td>2025</td><td>48 313 000</td></tr>
+<tr><td>Playboi Carti</td><td>Lil Uzi Vert</td><td>TWIN TRIM</td><td>MUSIC</td><td>2025</td><td>34 168 000</td></tr>
+<tr><td>Playboi Carti, Lil Uzi Vert</td><td></td><td>Shoota</td><td>Die Lit</td><td>2018</td><td>811 383 000</td></tr>
+<tr><td>Playboi Carti, Lil Uzi Vert</td><td></td><td>wokepuplikethis</td><td>Playboi Carti</td><td>2017</td><td>595 606 000</td></tr>
+<tr><td>Playboi Carti</td><td></td><td>Location</td><td>Playboi Carti</td><td>2017</td><td>561 776 000</td></tr>
+<tr><td>Playboi Carti</td><td></td><td>Foreign</td><td>Die Lit</td><td>2018</td><td>263 801 000</td></tr>
+<tr><td>Drake</td><td>Travis Scott</td><td>Fair Trade</td><td>Certified Lover Boy</td><td>2021</td><td>1 022 631 000</td></tr>
+<tr><td>Drake</td><td>Future, Young Thug</td><td>Way 2 Sexy</td><td>Certified Lover Boy</td><td>2021</td><td>637 686 000</td></tr>
+<tr><td>Drake</td><td>Lil Baby</td><td>Wants and Needs</td><td>Scary Hours 2</td><td>2021</td><td>921 089 000</td></tr>
+<tr><td>Drake</td><td></td><td>No Friends in the Industry</td><td>Certified Lover Boy</td><td>2021</td><td>262 848 000</td></tr>
+<tr><td>Lil Baby</td><td>Drake</td><td>Yes Indeed</td><td>Harder Than Ever</td><td>2018</td><td>1 258 749 000</td></tr>
+<tr><td>Lil Baby</td><td></td><td>Not Finished</td><td>It's Only Me</td><td>2022</td><td>89 555 000</td></tr>
+<tr><td>Lil Baby</td><td>Gunna</td><td>Drip Too Hard</td><td>Drip Harder</td><td>2018</td><td>1 723 434 000</td></tr>
+<tr><td>Lil Baby</td><td>Gunna, Lil Uzi Vert</td><td>Life Goes On</td><td>Harder Than Ever</td><td>2018</td><td>513 980 000</td></tr>
+<tr><td>Lil Baby</td><td>Drake, Gunna</td><td>Never Recover</td><td>Drip Harder</td><td>2018</td><td>427 199 000</td></tr>
+<tr><td>Lil Baby</td><td>Gunna</td><td>I Am</td><td>Street Gossip</td><td>2018</td><td>92 825 000</td></tr>
+<tr><td>Lil Baby</td><td>Young Thug</td><td>Never Hating</td><td>It's Only Me</td><td>2022</td><td>80 630 000</td></tr>
+<tr><td>Young Thug</td><td>Lil Baby</td><td>Bad Bad Bad</td><td>So Much Fun</td><td>2019</td><td>409 778 000</td></tr>
+<tr><td>Young Thug</td><td></td><td>With Them</td><td>Slime Season 3</td><td>2016</td><td>89 967 000</td></tr>
+<tr><td>Young Thug</td><td></td><td>Memo</td><td>Slime Season 3</td><td>2016</td><td>69 692 000</td></tr>
+<tr><td>The Weeknd</td><td>Playboi Carti</td><td>Timeless</td><td>Hurry Up Tomorrow</td><td>2025</td><td>1 146 707 000</td></tr>
+<tr><td>The Weeknd</td><td>Future</td><td>Double Fantasy</td><td>Double Fantasy</td><td>2023</td><td>241 078 000</td></tr>
+<tr><td>Rae Sremmurd</td><td>Juicy J</td><td>Powerglide</td><td>SR3MM</td><td>2018</td><td>421 927 000</td></tr>
+<tr><td>Rae Sremmurd</td><td>Young Thug</td><td>Offshore</td><td>SR3MM</td><td>2018</td><td>12 073 000</td></tr>
+<tr><td>Gunna</td><td></td><td>south to west</td><td>DS4EVER</td><td>2022</td><td>85 958 000</td></tr>
+<tr><td>Gunna</td><td>Young Thug</td><td>mop</td><td>DS4EVER</td><td>2022</td><td>43 767 000</td></tr>
+<tr><td>Gunna</td><td>Future, Young Thug</td><td>pushin P</td><td>DS4EVER</td><td>2022</td><td>415 931 000</td></tr>
+<tr><td>Metro Boomin</td><td>Future</td><td>Superhero (Heroes & Villains)</td><td>HEROES & VILLAINS</td><td>2022</td><td>956 549 740</td></tr>
+<tr><td>Metro Boomin</td><td>Future, Don Toliver</td><td>Too Many Nights</td><td>HEROES & VILLAINS</td><td>2022</td><td>1 060 329 000</td></tr>
+<tr><td>Don Toliver</td><td>Travis Scott</td><td>ICE AGE</td><td>HARDSTONE PSYCHO</td><td>2024</td><td>53 519 000</td></tr>
+<tr><td>Don Toliver</td><td></td><td>BANDIT</td><td>HARDSTONE PSYCHO</td><td>2024</td><td>432 316 000</td></tr>
+<tr><td>Lil Wayne</td><td>Drake, Future</td><td>Love Me</td><td>I Am Not A Human Being II</td><td>2013</td><td>1 224 596 000</td></tr>
+<tr><td>Lil Wayne</td><td>Kendrick Lamar</td><td>Mona Lisa</td><td>Tha Carter V</td><td>2018</td><td>315 024 000</td></tr>
+<tr><td>Lil Wayne</td><td></td><td>Let It All Work Out</td><td>Tha Carter V</td><td>2018</td><td>206 174 000</td></tr>
+<tr><td>Lil Wayne</td><td>Drake</td><td>She Will</td><td>Tha Carter IV</td><td>2011</td><td>520 125 000</td></tr>
+<tr><td>Kendrick Lamar</td><td></td><td>Swimming Pools (Drank)</td><td>good kid, m.A.A.d city</td><td>2012</td><td>556 675 000</td></tr>
+<tr><td>Kendrick Lamar</td><td>MC Eiht</td><td>m.A.A.d city</td><td>good kid, m.A.A.d city</td><td>2012</td><td>871 257 000</td></tr>
+<tr><td>Kendrick Lamar</td><td></td><td>A.D.H.D</td><td>Section.80</td><td>2011</td><td>492 516 000</td></tr>
+<tr><td>Lil Uzi Vert</td><td></td><td>Homecoming</td><td>Eternal Atake</td><td>2020</td><td>260 959 000</td></tr>
+<tr><td>Lil Uzi Vert</td><td></td><td>Baby Pluto</td><td>Eternal Atake</td><td>2020</td><td>222 464 000</td></tr>
+<tr><td>Lil Uzi Vert</td><td>Young Thug</td><td>Got The Guap</td><td>Eternal Atake – LUV vs. The World 2</td><td>2020</td><td>46 889 000</td></tr>
+<tr><td>Lil Uzi Vert</td><td></td><td>Futsal Shuffle 2020</td><td>Eternal Atake</td><td>2020</td><td>358 591 000</td></tr>
+        </tbody>
+    </table>
+
+    <br>
+
+    <details>
+        <summary><b>Статистика</b></summary>
+        <p>Всего записей в таблице: <b>50</b></p>
+        <ul>
+            <li>Самый популярный трек: Drip Too Hard - 1 723 434 000 прослушиваний</li>
+            <li>Самый старый трек: 2011 год</li>
+            <li>Самый новый трек: 2025 год</li>
+            <li>В таблице нет чифкифа, зато он есть здесь</li>
+        </ul>
+        <a href="https://www.youtube.com/watch?v=ISj_j2h9UjA&list=RDISj_j2h9UjA&start_radio=1">
+        <img src="img/chief.png" alt="ЧифКиф" width="700" height="700" align = "center"></a>
+    </details>
+
+</body>
+</html>
