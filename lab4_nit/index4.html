@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang = "ru">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Практическая 4</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <style>
+        
+        body {
+            background-color: #F5F5F5; 
+        }
+
+        .gallery-container {
+            width: 97%;
+            height: 250px;
+            margin: 0 auto;
+        }
+        
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        
+        .gallery-card {
+            overflow: hidden;
+            height: 100%;
+        }
+        
+        .hover-effect:hover {
+            transform: scale(1.03);
+        }
+        
+        .right-column-inner {
+            height: 100%;
+        }
+
+        .article-img {
+            height: 333px;
+        }
+
+        @media (max-width: 991.98px) {
+            .gallery-container {
+                height: auto;
+            }
+            img {
+                height: 250px;
+            }
+         }
+
+    </style>
+  </head>
+
+<body>
+
+    <header>
+
+        <nav class="navbar navbar-expand-md bg-light navbar-light border mb-3" >
+            <a class="navbar-brand mx-3">Музыка</a>  
+            
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="menu">
+
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active bg-info rounded" href="index4.html">Главная</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="wedonttrustyou.html">We don't trust you</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="tracklist.html">Статистика</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Меню 4</a>
+                    </li>
+                </ul>
+            </div>
+
+        </nav>
+
+    </header>
+
+    <gallery>
+
+        <div class="gallery-container mb-3 pb-3 border-bottom">
+            <div class="row g-0 h-100">
+                
+                <div class="col-lg-6 col-md-6 gallery-col h-100">
+                    <div class="gallery-card hover-effect">
+                        <img src="img/wedonttrustyou.png" alt="wedonttrustyou">
+                    </div>
+                </div>
+                
+                <div class="col-lg-3 col-md-6 gallery-col h-100">
+                    <div class="gallery-card hover-effect">
+                        <img src="img/certifiedloverboy.png" alt="certifiedloverboy">
+                    </div>
+                </div>
+                
+                <div class="col-lg-3 col-md-12 gallery-col h-100">
+                    <div class="right-column-inner">
+                        <div class="row g-0 h-100">
+                            
+                            <div class="col-md-6 col-lg-12 h-50">
+                                <div class="gallery-card h-100 hover-effect">
+                                    <img src="img/slimeseason3.png" alt="slimeseason3">
+                                </div>
+                            </div>
+                            
+                            <div class="col-md-6 col-lg-12 h-50">
+                                <div class="gallery-card h-100 hover-effect">
+                                    <img src="img/iammusic.png" alt="MUSIC">
+                                </div>
+                            </div>
+                            
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+
+    </gallery>
+
+    <main class="row">
+        <article class="col-md-9"> 
+            <div class="row m-1 p-3 border bg-light"> <!-- mb-3 pb-3 border-bottom для отступа снизу и разделительной линии -->
+                <div class="col-md-6">
+                    <h2>
+                        HEROES & VILLAINS <span class="text-muted">by Metro Boomin</span>
+                    </h2>
+                    <p class="lead">
+                        «Heroes & Villains» — это концептуальный альбом американского рэп-продюсера Metro Boomin, выпущенный 2 декабря 2022 года, который исследует темы добра и зла через психоделический трэп. Альбом получил широкое признание критиков и дебютировал на первом месте в чарте Billboard 200.
+                    </p>
+                    <a class="float-end" href="#">Подробнее>></a>
+                </div>
+
+                <div class="col-md-6">
+                    <img src="img/heroes&villians.png" alt="Heroes & Villains" class="d-block mx-auto article-img">
+                </div>
+            </div>
+
+            <div class="row m-1 p-3 border bg-light"> <!-- mb-3 pb-3 border-bottom для отступа снизу и разделительной линии -->
+                <div class="col-md-9 order-md-2"> <!-- order-md-2 для изменения порядка -->
+                    <h2>
+                        WE DON'T TRUST YOU <span class="text-muted">by Future & Metro Boomin</span>
+                    </h2>
+                    <p class="lead">
+                        «We Don't Trust You» – это совместный рэп-альбом Future и Metro Boomin, выпущенный 22 марта 2024 года, который стал первой частью дилогии из двух альбомов, выпущенных с интервалом в несколько недель. Альбом вызвал широкий резонанс и спровоцировал масштабную драму в рэп-индустрии.
+                    </p>
+                    <a href="wedonttrustyou.html">Подробнее>></a>
+                </div>
+                <div class="col-md-3 order-md-1"> <!-- order-md-1 для изменения порядка -->
+                    <img img src="img/wedonttrustyou.png" alt="WE DON'T TRUST YOU" class="d-block mx-auto article-img">
+                </div>
+            </div>
+        </article>
+
+        <aside class="col-md-3">
+            <div class="m-1 border bg-light">
+                <div class="row p-1">
+                    <div class="col-lg-6 col-md-12">
+                        <p>
+                            <strong>MONSTER <span class="text-muted">by Future</span></strong>
+                        </p>
+                        <p>
+                            «Monster» — тринадцатый микстейп рэпера Future.
+                        </p>
+                        <a class="float-end" href="#">Подробнее>></a>
+                    </div>
+
+                    <div class="col-lg-6 col-md-12">
+                        <img src="img/monster.png" alt="Monster" class="d-block mx-auto">
+                    </div>
+                </div>
+
+                <div class="row p-1">
+                    <div class="col-lg-6 col-md-12">
+                        <p>
+                            <strong>CHIEF KEEF <span class="text-muted">дядька</span></strong>
+                        </p>
+                        <p>
+                            Просто крутой мужик и вдохновляющая личность
+                        </p>
+                        <a class="float-end" href="#">Подробнее>></a>
+                    </div>
+
+                    <div class="col-lg-6 col-md-12">
+                        <img src="img/chief.png" alt="Chief Keef" class="d-block mx-auto">
+                    </div>
+                </div>
+
+                <div class="row p-1">
+                    <div class="col-lg-6 col-md-12">
+                        <p>
+                            <strong>SLIME SEASON 3 <span class="text-muted">by Young Thug</span></strong>
+                        </p>
+                        <p>
+                            «Slime Season 3» — третий микстейп Young Thug.
+                        </p>
+                        <a class="float-end" href="#">Подробнее>></a>
+                    </div>
+
+                    <div class="col-lg-6 col-md-12">
+                        <img src="img/slimeseason3.png" alt="Slime Season 3" class="d-block mx-auto">
+                    </div>
+                </div>
+
+                <div class="row p-1">
+                    <div class="col-lg-6 col-md-12">
+                        <p>
+                            <strong>MUSIC <span class="text-muted">by Playboi Carti</span></strong>
+                        </p>
+                        <p>
+                            «Music» — третий студийный альбом Playboi Carti.
+                        </p>
+                        <a class="float-end" href="#">Подробнее>></a>
+                    </div>
+
+                    <div class="col-lg-6 col-md-12">
+                        <img src="img/iammusic.png" alt="MUSIC" class="d-block mx-auto">
+                    </div>
+                </div>
+            </div>
+        </aside>
+        
+    </main>
+
+    <footer class="container text-center">
+        <p class="text-muted">Автор: Алексей Калюжко</p>
+        <p class="text-muted">Группа: Б9123-09.03.04(2)</p>
+        <p class="text-muted">kalyuzhko.am@dvfu.ru</p>
+    </footer>
+
+</body>
+</html>
