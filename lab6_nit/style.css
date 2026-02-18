@@ -1,0 +1,45 @@
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;  
+    background: #F5F5F5;
+    font-size: 1.3em;
+}
+
+/*//////////////////////////////////////////*/
+
+footer {
+    width: 100%;
+    padding: 10px;
+    font-size: 1.1em;;
+    background: #E3E3E3;
+    color: #164B69;
+    text-align: center;
+}
+
+/*//////////////////////////////////////////*/
+
+table{
+    margin: 20px 5px;
+	border-collapse:collapse;
+}
+table td, th{
+	padding: 5px 10px;
+	border: thin solid grey;
+}
+
+/*//////////////////////////////////////////*/
+
+.text {
+    word-wrap: break-word;     
+    width: 90%;           
+    padding: 10px;             
+}
+
+/*//////////////////////////////////////////*/
+
+img {
+    width: 200px;
+    height: 100%;
+}
+
