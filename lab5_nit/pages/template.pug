@@ -1,0 +1,21 @@
+include ../components/mixin.pug
+include ../components/data.pug
+
+doctype html
+html(lang="ru")
+    head
+        title #{title} 
+    body
+        block header
+            h2= title
+
+        // контейнер с надписью
+        header.nav-header
+            span.nav-header__title Музыка
+            block nav   
+
+        block content
+            
+        block footer
+            footer
+                h4 &copy; Калюжко Алексей | пг2(Б9123-09.03.04) | 2026

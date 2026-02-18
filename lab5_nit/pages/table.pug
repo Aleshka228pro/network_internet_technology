@@ -1,0 +1,141 @@
+extends template
+
+block nav
+    nav
+        +createMenu(dictMenu, 'Список')
+
+block content
+    .table-page
+
+        form.table-page__filters
+            details.filters
+                summary.filters__summary <b>Фильтры</b>
+                .filters__body
+                    p
+                        label Исполнитель
+                        input.filters__input(type="text" name="artistFilter" placeholder="фильтр по исполнителю")
+                    p
+                        label Название трека
+                        input.filters__input(type="text" name="trackFilter" placeholder="фильтр по названию трека")
+                    p
+                        label Альбом
+                        input.filters__input(type="text" name="albumFilter" placeholder="фильтр по альбому")
+                    p
+                        label Год выпуска от
+                        input.filters__input(type="number" name="yearFrom")
+                        |  до
+                        input.filters__input(type="number" name="yearTo")
+                    p
+                        label Прослушивания от
+                        input.filters__input(type="number" name="playsFrom" placeholder="мин.")
+                        |  до
+                        input.filters__input(type="number" name="playsTo" placeholder="макс.")
+                .filters__actions
+                    input.filters__button(type="submit" value="Найти")
+                    input.filters__button.filters__button--reset(type="reset" value="Сбросить фильтры")
+
+
+        form.table-page__sort
+            details.sort
+                summary.sort__summary <b>Сортировки</b>
+                .sort__body
+                    p
+                        | Первый уровень:
+                        select.sort__select(name="firstColumn")
+                            option(value="null") Нет
+                            option(value="artist") Исполнитель
+                            option(value="track") Название трека
+                            option(value="album") Альбом
+                            option(value="year") Год выпуска
+                            option(value="plays") Прослушивания
+                        |  по убыванию?
+                        input.sort__checkbox(type="checkbox" name="firstDesc")
+                    p
+                        | Второй уровень:
+                        select.sort__select(name="secondColumn")
+                            option(value="null") Нет
+                            option(value="artist") Исполнитель
+                            option(value="track") Название трека
+                            option(value="album") Альбом
+                            option(value="year") Год выпуска
+                            option(value="plays") Прослушивания
+                        |  по убыванию?
+                        input.sort__checkbox(type="checkbox" name="secondDesc")
+                    p
+                        | Третий уровень:
+                        select.sort__select(name="thirdColumn")
+                            option(value="null") Нет
+                            option(value="artist") Исполнитель
+                            option(value="track") Название трека
+                            option(value="album") Альбом
+                            option(value="year") Год выпуска
+                            option(value="plays") Прослушивания
+                        |  по убыванию?
+                        input.sort__checkbox(type="checkbox" name="thirdDesc")
+                .sort__actions
+                    input.sort__button(type="submit" value="Применить сортировку")
+
+
+        form.table-page__chart
+            details.chart-settings
+                summary.chart-settings__summary <b>Настройки графика</b>
+                .chart-settings__body
+                    p
+                        b OX
+                    p
+                        input.chart-settings__radio(type="radio" name="chartType" value="artist" checked)
+                        | Исполнитель
+                        br
+                        input.chart-settings__radio(type="radio" name="chartType" value="album")
+                        | Альбом
+                        br
+                        input.chart-settings__radio(type="radio" name="chartType" value="year")
+                        | Год
+                    p
+                        b OY
+                    p
+                        | Данные для отображения:
+                        br
+                        input.chart-settings__checkbox(type="checkbox" name="showAvgPlays")
+                        | Среднее количество прослушиваний
+                        br
+                        input.chart-settings__checkbox(type="checkbox" name="showMinPlays")
+                        | Минимальные прослушивания
+                        br
+                        input.chart-settings__checkbox(type="checkbox" name="showMaxPlays")
+                        | Максимальные прослушивания
+                .chart-settings__actions
+                    input.chart-settings__button(type="submit" value="Обновить график")
+
+
+        table.table-page__table.data-table
+            thead.data-table__head
+                tr.data-table__row
+                    th.data-table__cell Исполнитель
+                    th.data-table__cell Приглашенные исполнители
+                    th.data-table__cell Название трека
+                    th.data-table__cell Альбом
+                    th.data-table__cell Год
+                    th.data-table__cell Прослушивания
+            tbody.data-table__body
+                each track in trackList
+                    tr.data-table__row
+                        td.data-table__cell= track.artist
+                        td.data-table__cell= track.featured
+                        td.data-table__cell= track.track
+                        td.data-table__cell= track.album
+                        td.data-table__cell= track.year
+                        td.data-table__cell= track.plays
+
+
+        details.table-page__stats.stats
+            summary.stats__summary <b>Статистика</b>
+            .stats__body
+                p Всего записей в таблице: <b>#{trackList.length}</b>
+                ul.stats__list
+                    li Самый популярный трек: Drip Too Hard — 1 723 434 000 прослушиваний
+                    li Самый старый трек: 2011 год
+                    li Самый новый трек: 2025 год
+                    li В таблице нет чифкифа, зато он есть здесь
+                a(href="https://www.youtube.com/watch?v=ISj_j2h9UjA&list=RDISj_j2h9UjA&start_radio=1")
+                    img.stats__image(src=require("../images/image7.png") alt="ЧифКиф" width="700" height="700")

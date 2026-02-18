@@ -1,0 +1,44 @@
+extends template
+
+block nav
+    nav
+        +createMenu(dictMenu, 'Главная')
+        
+block content
+    .gallery
+        .gallery__item.gallery__item--left
+            a(href= "album.html")
+                img.gallery__img(src=require("../images/" + listImages[0]) alt="we dont trust you")
+
+        .gallery__item.gallery__item--right-top
+            img.gallery__img(src=require("../images/" + listImages[1]) alt="certified loverboy")
+
+        .gallery__column
+            .gallery__item.gallery__item--column-top
+                img.gallery__img(src=require("../images/" + listImages[2]) alt="slime season 3")
+            .gallery__item.gallery__item--column-bottom
+                img.gallery__img(src=require("../images/" + listImages[3]) alt="music")
+
+    .main-course
+        .main-course__article
+            each item, index in listSections
+                section.article-section
+                    h3.article-section__title= item.header
+                    .article-section__content
+                        if index === 1
+                            img.article-section__image.article-section__image--left(src=require("../images/" + item.image) alt=item.header)
+                        else
+                            img.article-section__image.article-section__image--right(src=require("../images/" + item.image) alt=item.header)
+                        p.article-section__text= item.text
+                        a.article-section__link(
+                            href="#"
+                            class= index === 1 ? 'article-section__link--left' : 'article-section__link') Подробнее >>
+        
+        .main-course__aside
+            each item in asideItems
+                .aside-card
+                    img.aside-card__image(src=require("../images/" + item.image) alt=item.title)
+                    .aside-card__info
+                        h3.aside-card__title= item.title
+                        p.aside-card__description= item.description
+                        a.aside-card__link(href="#") Подробнее >>

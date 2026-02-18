@@ -1,0 +1,117 @@
+block variables
+    //-
+        словарь для описания меню: элемент меню и название файла
+    -
+        var dictMenu = { 'Главная': 'index.html', 
+                         'Альбомы': "#",  
+                         'Список': "table.html", 
+                         'Меню 4': "#"
+                       }
+    //-
+        список файлов с рисунками для раздела сайта images
+    - 
+        var listImages = ['image1.png', 'image2.png', 'image3.png', 'image5.png', 'image6.png', 'imag7.png']
+    
+    //-
+        словарь для карточек (раздел section): заголовок, рисунок, текст
+    - 
+        var listSections = [
+            {'header': 'HEROES  VILLAINS by Metro Boomin',
+            'image': 'image5.png', 
+            'text': '«Heroes  Villains» — это концептуальный альбом американского рэп-продюсера Metro Boomin, выпущенный 2 декабря 2022 года, который исследует темы добра и зла через психоделический трэп. Альбом получил широкое признание критиков и дебютировал на первом месте в чарте Billboard 200.'
+            },
+            {'header': "WE DON'T TRUST YOU by Future  Metro Boomin",
+            'image': 'image1.png', 
+            'text': "«We Don't Trust You» – это совместный рэп-альбом Future и Metro Boomin, выпущенный 22 марта 2024 года, который стал первой частью дилогии из двух альбомов, выпущенных с интервалом в несколько недель. Альбом вызвал широкий резонанс и спровоцировал масштабную драму в рэп-индустрии."
+            }
+        ]
+    -
+        var asideItems = [
+            {'image': 'image6.png',
+            'title': 'Monster', 
+            'description': '«Monster» — тринадцатый микстейп рэпера Future.'
+            },
+            {'image': 'image7.png',
+            'title': 'Чиф Киф', 
+            'description': 'Просто крутой и стильный мужик.'
+            },
+            {'image': 'image4.png', 
+            'title': 'Slime Season 3', 
+            'description': '«Slime Season 3» — третий микстейп рэпера Young Thug.'
+            },
+            {'image': 'image3.png', 
+            'title': 'MUSIC', 
+            'description': 'Music — третий студийный альбом рэпера Playboi Carti.'
+            }
+        ]
+    -
+        var structures = [
+        {
+            menuItem: "WE DON'T TRUST YOU by Future & Metro Boomin",
+            pict: "image1.png",
+            firstP: `«We Don't Trust You» – это совместный рэп-альбом Future и Metro Boomin, выпущенный 22 марта 2024 года,
+                    который стал первой частью дилогии из двух альбомов, выпущенных с интервалом в несколько недель. 
+                     Альбом вызвал широкий резонанс и спровоцировал масштабную драму в рэп-индустрии.
+                    Концептуальный трэп альбом о наболевшем, который оказался способен удивить и встряхнуть, казалось бы, уже покрытую тремя слоями пыли хип-хоп индустрию.`,
+            secondP: `Последний раз, когда дуэт больших трэп артистов в составе продюсер + рэппер делали что-то соразмерно масштабное – был 2020 год, 
+                    хэдлайнером которого выступил “Savage Mode II”. И вот, спустя четыре года Метро, только уже в компании с Плуто, 
+                    выдаёт нам накопившуюся за это время ядовитую эссенцию, срывающую маски со всех, кто предпочёл мимикрировать.
+                    МЫ ТЕБЕ НЕ ДОВЕРЯЕМ – фраза, которую, так или иначе, сказал каждый, кто принимал участие в создании этого проекта. 
+                    Эфемерная строчка, разгоняющая нарратив про "No Friends In The Industry", или,
+                    всё-таки, направленный выстрел в адрес того, кому Young Metro посоветовал оставаться по ту сторону от него?`
+        }
+        ]
+
+    -
+        var trackList = [
+            { artist: 'Juicy J', featured: '', track: 'Riley', album: 'Blue Dream & Lean', year: 2011, plays: 6830000 },
+            { artist: 'Future', featured: 'Lil Wayne', track: 'After That', album: 'Monster', year: 2014, plays: 9595000 },
+            { artist: 'Future', featured: '', track: 'Throw Away', album: 'Monster', year: 2014, plays: 128925000 },
+            { artist: 'Future', featured: '', track: 'Codeine Crazy', album: 'Monster', year: 2014, plays: 195935000 },
+            { artist: 'Future, Metro Boomin', featured: 'Travis Scott, Playboi Carti', track: 'Type Shit', album: "WE DON'T TRUST YOU", year: 2024, plays: 631077000 },
+            { artist: 'Future, Metro Boomin', featured: '', track: 'Magic Don Juan (Princess Diana)', album: "WE DON'T TRUST YOU", year: 2024, plays: 41201000 },
+            { artist: 'Future, Metro Boomin', featured: 'The Weeknd', track: 'Young Metro', album: "WE DON'T TRUST YOU", year: 2024, plays: 131412000 },
+            { artist: 'Playboi Carti', featured: '', track: 'EVIL JORDAN', album: 'MUSIC', year: 2025, plays: 192809000 },
+            { artist: 'Playboi Carti', featured: 'Future', track: 'TRIM', album: 'MUSIC', year: 2025, plays: 48313000 },
+            { artist: 'Playboi Carti', featured: 'Lil Uzi Vert', track: 'TWIN TRIM', album: 'MUSIC', year: 2025, plays: 34168000 },
+            { artist: 'Playboi Carti, Lil Uzi Vert', featured: '', track: 'Shoota', album: 'Die Lit', year: 2018, plays: 811383000 },
+            { artist: 'Playboi Carti, Lil Uzi Vert', featured: '', track: 'wokepuplikethis', album: 'Playboi Carti', year: 2017, plays: 595606000 },
+            { artist: 'Playboi Carti', featured: '', track: 'Location', album: 'Playboi Carti', year: 2017, plays: 561776000 },
+            { artist: 'Playboi Carti', featured: '', track: 'Foreign', album: 'Die Lit', year: 2018, plays: 263801000 },
+            { artist: 'Drake', featured: 'Travis Scott', track: 'Fair Trade', album: 'Certified Lover Boy', year: 2021, plays: 1022631000 },
+            { artist: 'Drake', featured: 'Future, Young Thug', track: 'Way 2 Sexy', album: 'Certified Lover Boy', year: 2021, plays: 637686000 },
+            { artist: 'Drake', featured: 'Lil Baby', track: 'Wants and Needs', album: 'Scary Hours 2', year: 2021, plays: 921089000 },
+            { artist: 'Drake', featured: '', track: 'No Friends in the Industry', album: 'Certified Lover Boy', year: 2021, plays: 262848000 },
+            { artist: 'Lil Baby', featured: 'Drake', track: 'Yes Indeed', album: 'Harder Than Ever', year: 2018, plays: 1258749000 },
+            { artist: 'Lil Baby', featured: '', track: 'Not Finished', album: "It's Only Me", year: 2022, plays: 89555000 },
+            { artist: 'Lil Baby', featured: 'Gunna', track: 'Drip Too Hard', album: 'Drip Harder', year: 2018, plays: 1723434000 },
+            { artist: 'Lil Baby', featured: 'Gunna, Lil Uzi Vert', track: 'Life Goes On', album: 'Harder Than Ever', year: 2018, plays: 513980000 },
+            { artist: 'Lil Baby', featured: 'Drake, Gunna', track: 'Never Recover', album: 'Drip Harder', year: 2018, plays: 427199000 },
+            { artist: 'Lil Baby', featured: 'Gunna', track: 'I Am', album: 'Street Gossip', year: 2018, plays: 92825000 },
+            { artist: 'Lil Baby', featured: 'Young Thug', track: 'Never Hating', album: "It's Only Me", year: 2022, plays: 80630000 },
+            { artist: 'Young Thug', featured: 'Lil Baby', track: 'Bad Bad Bad', album: 'So Much Fun', year: 2019, plays: 409778000 },
+            { artist: 'Young Thug', featured: '', track: 'With Them', album: 'Slime Season 3', year: 2016, plays: 89967000 },
+            { artist: 'Young Thug', featured: '', track: 'Memo', album: 'Slime Season 3', year: 2016, plays: 69692000 },
+            { artist: 'The Weeknd', featured: 'Playboi Carti', track: 'Timeless', album: 'Hurry Up Tomorrow', year: 2025, plays: 1146707000 },
+            { artist: 'The Weeknd', featured: 'Future', track: 'Double Fantasy', album: 'Double Fantasy', year: 2023, plays: 241078000 },
+            { artist: 'Rae Sremmurd', featured: 'Juicy J', track: 'Powerglide', album: 'SR3MM', year: 2018, plays: 421927000 },
+            { artist: 'Rae Sremmurd', featured: 'Young Thug', track: 'Offshore', album: 'SR3MM', year: 2018, plays: 12073000 },
+            { artist: 'Gunna', featured: '', track: 'south to west', album: 'DS4EVER', year: 2022, plays: 85958000 },
+            { artist: 'Gunna', featured: 'Young Thug', track: 'mop', album: 'DS4EVER', year: 2022, plays: 43767000 },
+            { artist: 'Gunna', featured: 'Future, Young Thug', track: 'pushin P', album: 'DS4EVER', year: 2022, plays: 415931000 },
+            { artist: 'Metro Boomin', featured: 'Future', track: 'Superhero (Heroes & Villains)', album: 'HEROES & VILLAINS', year: 2022, plays: 956549740 },
+            { artist: 'Metro Boomin', featured: 'Future, Don Toliver', track: 'Too Many Nights', album: 'HEROES & VILLAINS', year: 2022, plays: 1060329000 },
+            { artist: 'Don Toliver', featured: 'Travis Scott', track: 'ICE AGE', album: 'HARDSTONE PSYCHO', year: 2024, plays: 53519000 },
+            { artist: 'Don Toliver', featured: '', track: 'BANDIT', album: 'HARDSTONE PSYCHO', year: 2024, plays: 432316000 },
+            { artist: 'Lil Wayne', featured: 'Drake, Future', track: 'Love Me', album: 'I Am Not A Human Being II', year: 2013, plays: 1224596000 },
+            { artist: 'Lil Wayne', featured: 'Kendrick Lamar', track: 'Mona Lisa', album: 'Tha Carter V', year: 2018, plays: 315024000 },
+            { artist: 'Lil Wayne', featured: '', track: 'Let It All Work Out', album: 'Tha Carter V', year: 2018, plays: 206174000 },
+            { artist: 'Lil Wayne', featured: 'Drake', track: 'She Will', album: 'Tha Carter IV', year: 2011, plays: 520125000 },
+            { artist: 'Kendrick Lamar', featured: '', track: 'Swimming Pools (Drank)', album: 'good kid, m.A.A.d city', year: 2012, plays: 556675000 },
+            { artist: 'Kendrick Lamar', featured: 'MC Eiht', track: 'm.A.A.d city', album: 'good kid, m.A.A.d city', year: 2012, plays: 871257000 },
+            { artist: 'Kendrick Lamar', featured: '', track: 'A.D.H.D', album: 'Section.80', year: 2011, plays: 492516000 },
+            { artist: 'Lil Uzi Vert', featured: '', track: 'Homecoming', album: 'Eternal Atake', year: 2020, plays: 260959000 },
+            { artist: 'Lil Uzi Vert', featured: '', track: 'Baby Pluto', album: 'Eternal Atake', year: 2020, plays: 222464000 },
+            { artist: 'Lil Uzi Vert', featured: 'Young Thug', track: 'Got The Guap', album: 'Eternal Atake – LUV vs. The World 2', year: 2020, plays: 46889000 },
+            { artist: 'Lil Uzi Vert', featured: '', track: 'Futsal Shuffle 2020', album: 'Eternal Atake', year: 2020, plays: 358591000 }
+        ];
