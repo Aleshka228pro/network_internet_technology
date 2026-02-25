@@ -1,7 +1,7 @@
 body {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-evenly;
+    justify-content: space-evenly; /*равномерные отступы*/
     background: #F5F5F5;
 }
 
@@ -11,8 +11,7 @@ body {
     width: 100%;
     border: solid;
     display: flex;
-    margin: auto;
-    justify-content: space-between; 
+    justify-content: space-between;  /*выравнивает элементы внутри контейнера*/
     border-radius: 7px;
     color: navy;
     font-size: 1.15em;
@@ -24,10 +23,6 @@ body {
     display: inline-flex;
 }
 
-div .menu {
-    display: flex;
-    justify-content: flex-end;
-}
 .menu a{
     text-decoration: none;
     margin: 0 5px;
@@ -52,38 +47,16 @@ a.active {
             padding: 10px 0;
         }
 
-        .left-img {
-            grid-column: 1 / 2;
-            grid-row: 1 / 2;
-            overflow: hidden;
-        }
-
-        .right-img {
-            grid-column: 2 / 3;
-            grid-row: 1 / 2;
-            overflow: hidden;
-        }
-
-        .column-right-img {
-            grid-column: 3 / 4;
-            grid-row: 1 / 2;
-            display: grid;
-            grid-template-rows: 1fr 1fr;       
-            gap: 0;
-            overflow: hidden;
-        }
-
-        .top-img {
-            overflow: hidden;
-        }
-        .bottom-img {
-            overflow: hidden;
-        }
-
         .gallery img {
             width: 100%;
             height: 100%;
             object-fit: cover;
+            overflow: hidden;
+        }
+
+        .column-right-img {
+            display: grid;
+            grid-template-rows: 1fr 1fr;       
             overflow: hidden;
         }
 
@@ -131,6 +104,8 @@ a.active {
     padding: 5px;
 }
 
+
+
 .aside img {
     float: right;
     height: 130px;
@@ -159,21 +134,21 @@ footer {
 /*//////////////////////////////////////////*/
 
 @media (max-width: 700px){
+
     .header {
-        flex-direction: column;
-        align-items: center;
-    }
-    .header > .menu:last-child {
         display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        width: 100%;
+        flex-direction: column;
     }
-    .header > .menu:last-child a {
-        flex: 0 0 45%;
+
+    div.menu{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
         text-align: center;
     }
 
+    a.menu {
+        justify-content: center;
+    }
 
     .gallery {
         display: flex;
@@ -182,7 +157,7 @@ footer {
     }
     .gallery img {
         width: 100%;
-        height: 100%;
+        height: 200px;
         object-fit: cover;
     }
 
@@ -215,13 +190,3 @@ footer {
         margin: 0 0 10px 0;
     }
 }
-
-
-
-
-
-
-
-
-
-
